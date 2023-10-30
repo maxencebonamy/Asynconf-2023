@@ -20,6 +20,7 @@ const CarSection = ({sectionRef, nextSection, car, setCar}: CarSectionProps) => 
         const timeout = setTimeout(() => {
             scrollToSection(nextSection)
         }, 500)
+        return () => clearTimeout(timeout)
     }, [car])
 
     return (

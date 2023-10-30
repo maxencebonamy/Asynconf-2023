@@ -1,0 +1,32 @@
+[
+    {
+        "id": 0,
+        "scoreMin": 0,
+        "scoreMax": 10,
+        "rate": 3
+    },
+    {
+        "id": 1,
+        "scoreMin": 11,
+        "scoreMax": 15,
+        "rate": 2.74
+    },
+    {
+        "id": 2,
+        "scoreMin": 16,
+        "scoreMax": 25,
+        "rate": 2.52
+    },
+    {
+        "id": 3,
+        "scoreMin": 26,
+        "scoreMax": 33,
+        "rate": 2.10
+    },
+    {
+        "id": 4,
+        "scoreMin": 34,
+        "scoreMax": 40,
+        "rate": 1.85
+    }
+]

@@ -4,24 +4,26 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../..
 import Image from "next/image"
 import carImages from "@/assets/images/cars/carImages"
 import { CarType } from "@/lib/types"
+import { cn } from "@/lib/utils"
 
 interface CarCardProps {
     car: CarType
     onClick: () => void
+    selected?: boolean
 }
 
-const CarCard = ({ car, onClick }: CarCardProps) => {
+const CarCard = ({ car, onClick, selected }: CarCardProps) => {
     return (
-        <Card className="cursor-pointer w-4/12" onClick={onClick}>
+        <Card className={cn("cursor-pointer w-96 transition-all duration-500 hover:bg-muted", selected ? "border-muted-foreground" : "")} onClick={onClick}>
             <CardHeader className="pb-2">
                 <CardTitle className="text-2xl font-semibold text-center">{car.name}</CardTitle>
                 <CardDescription className="text-md text-center">
-                    {`Votre véhicule pèse entre ${car.minWeight}kg et ${car.maxWeight}kg.`}
+                    {`Le véhicule pèse entre ${car.minWeight}kg et ${car.maxWeight}kg.`}
                 </CardDescription>
             </CardHeader>
 
             <CardContent className="flex flex-col items-center justify-start pt-2">
-                <Image className="m-0 p-0" src={carImages[car.id]} alt={`${car.name} icon`} width={180} height={180} />
+                <Image className="m-0 p-0" src={carImages[car.id]} alt={`${car.name} icon`} width={150} height={150} />
             </CardContent>
         </Card>
     )

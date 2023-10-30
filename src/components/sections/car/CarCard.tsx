@@ -12,7 +12,7 @@ interface CarCardProps {
 
 const CarCard = ({ car, onClick }: CarCardProps) => {
     return (
-        <Card className="cursor-pointer bg-transparent background-blur w-4/12" onClick={onClick}>
+        <Card className="cursor-pointer w-4/12" onClick={onClick}>
             <CardHeader className="pb-2">
                 <CardTitle className="text-2xl font-semibold text-center">{car.name}</CardTitle>
                 <CardDescription className="text-md text-center">

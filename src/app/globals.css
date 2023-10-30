@@ -60,6 +60,10 @@
 		@apply bg-background text-foreground;
 	}
 
+	img {
+		pointer-events: none;
+	}
+
 	::-webkit-scrollbar {
 		width: 22px;
 		/* Total width including `border-width` of scrollbar thumb */
@@ -93,9 +97,8 @@
 
 @layer components {
 	.background-blur {
-		/* background: linear-gradient(135deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.1)); */
-		background-color: transparent;
-		border: solid 6px #fff;
-		backdrop-filter: blur(20px);
+		background: linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1));
+		/* border: solid 6px #fff; */
+		backdrop-filter: blur(10px);
 	}
 }

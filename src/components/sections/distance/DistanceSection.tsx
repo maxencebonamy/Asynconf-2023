@@ -1,5 +1,6 @@
 import distances from "@/assets/data/distances.json"
 import { Button } from "@/components/ui/button"
+import { Slider } from "@/components/ui/slider"
 import { DistanceType } from "@/lib/types"
 
 interface DistanceSectionProps {
@@ -23,6 +24,10 @@ const DistanceSection = ({sectionRef, nextSection, distance, setDistance}: Dista
                     distances.map(e => (
                         <Button key={e.id} onClick={() => updateDistance(e)}>{`${e.min} - ${e.max} km`}</Button>
                     ))
+                }
+                <Slider className="cursor-pointer w-1/2" defaultValue={[20, 400]} max={500} step={1} />
+                {
+                    
                 }
             </div>
         </section>

@@ -14,7 +14,7 @@ export function formatNumberWithSeparators(value: number): string {
 }
 
 export function formatNumberWithComma(value: number): string {
-	return value.toString().replaceAll(".", ",")
+	return value.toFixed(2).replaceAll(".", ",")
 }
 
 export function getMiddleValue<T>(array: T[]): T {

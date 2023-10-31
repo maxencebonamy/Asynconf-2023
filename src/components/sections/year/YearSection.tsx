@@ -16,7 +16,7 @@ interface YearSectionProps {
 
 const YearSection = ({sectionRef, nextSection, year, setYear}: YearSectionProps) => {
     return (
-        <section ref={sectionRef} className="w-full h-screen flex flex-col items-center justify-start gap-16 p-8 max-w-[900px]">
+        <section ref={sectionRef} className="w-full h-screen flex flex-col items-center justify-start gap-16 px-4 py-16 max-w-[900px]">
             <h2 className="text-4xl font-medium pt-12 pb-4 text-center">
                 En quelle année a été fabriqué le véhicule ?
             </h2>

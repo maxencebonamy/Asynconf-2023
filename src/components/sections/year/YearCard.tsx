@@ -32,6 +32,7 @@ const YearCard = ({year, setYear, onClick} : YearCardProps) => {
                     max={years.length - 1}
                     defaultValue={[year.id]}
                     onValueChange={e => updateYear(e[0])}
+                    value={[year.id]}
                 />
             </CardContent>
 

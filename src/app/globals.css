@@ -97,8 +97,14 @@
 
 @layer components {
 	.background-blur {
-		background: linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1));
-		/* border: solid 6px #fff; */
 		backdrop-filter: blur(10px);
+	}
+
+	.background-gradient {
+		background: linear-gradient(135deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1));
+	}
+
+	.dark .background-gradient {
+		background: linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1));
 	}
 }

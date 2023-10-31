@@ -14,7 +14,7 @@ interface DistanceSectionProps {
 
 const DistanceSection = ({sectionRef, nextSection, distance, setDistance}: DistanceSectionProps) => {
     return (
-        <section ref={sectionRef} className="w-full h-screen flex flex-col items-center justify-start gap-16 p-8 max-w-[900px]">
+        <section ref={sectionRef} className="w-full h-screen flex flex-col items-center justify-start gap-16 px-4 py-16 max-w-[900px]">
             <h2 className="text-4xl font-medium pt-12 pb-4 text-center">
                 Quelle est la distance moyenne annuelle que vous allez parcourir avec le véhicule ?
             </h2>

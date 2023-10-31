@@ -16,7 +16,7 @@ const ResultCard = ({loanRate} : ResultCardProps) => {
         <Card className="w-[600px]">
             <CardHeader className="pb-2">
                 <CardTitle className="text-2xl font-semibold text-center">
-                    Votre taux d'emprunt
+                    Votre taux d'emprunt est de :
                 </CardTitle>
             </CardHeader>
 

@@ -29,7 +29,13 @@ const DistanceCard = ({distance, setDistance, onClick} : DistanceCardProps) => {
                 <p className="text-md text-muted-foreground">
                     {`Entre ${formatNumberWithSeparators(distance.min)} et ${formatNumberWithSeparators(distance.max)} km`}
                 </p>
-                <Slider className="cursor-pointer h-8" step={1} max={distances.length - 1} defaultValue={[distance.id]} onValueChange={e => updateDistance(e[0])} />
+                <Slider
+                    className="cursor-pointer h-8"
+                    step={1} max={distances.length - 1}
+                    defaultValue={[distance.id]}
+                    onValueChange={e => updateDistance(e[0])}
+                    value={[distance.id]}
+                />
             </CardContent>
 
             <CardFooter className="flex flex-row items-center justify-center pt-2">

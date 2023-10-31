@@ -10,11 +10,17 @@ interface ResultSectionProps {
     sectionRef: React.RefObject<HTMLElement>
     nextSection: React.RefObject<HTMLElement>
     loanRate: number | null
+    resetFields: () => void
 }
 
-const ResultSection = ({sectionRef, nextSection, loanRate}: ResultSectionProps) => {
+const ResultSection = ({sectionRef, nextSection, loanRate, resetFields}: ResultSectionProps) => {
+    const onButtonClick = () => {
+        resetFields()
+        scrollToSection(nextSection)
+    }
+
     return (
-        <section ref={sectionRef} className="w-full h-screen flex flex-col items-center justify-start gap-16 py-28 p-8 max-w-[900px]">
+        <section ref={sectionRef} className="w-full h-screen flex flex-col items-center justify-start gap-16 px-4 py-16 max-w-[900px]">
             <h2 className="text-4xl font-medium pt-12 pb-4 text-center">
                 {loanRate !== null ? "C'est déjà terminé !" : "Commencez par remplir les informations !"}
             </h2>
@@ -28,7 +34,7 @@ const ResultSection = ({sectionRef, nextSection, loanRate}: ResultSectionProps) 
                     </div>
                 ) : <></>
             }
-            <ShadowButton className="font-semibold h-12 rounded-xl text-lg px-6 mt-4" onClick={() => scrollToSection(nextSection)}>
+            <ShadowButton className="font-semibold h-12 rounded-xl text-lg px-6 mt-4" onClick={onButtonClick}>
                 {loanRate !== null ? "Recommencer" : "C'est parti"}
                 <ArrowRight height={28} width={28} className="pl-2" />
             </ShadowButton>

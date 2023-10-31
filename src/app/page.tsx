@@ -38,6 +38,14 @@ const Page = () => {
 		setLoanRate(cumputeLoanRate(car, energy, distance, year, passengers))
 	}, [car, energy, distance, year, passengers])
 
+	const resetFields = () => {
+		setCar(null)
+		setEnergy(null)
+		setDistance(getMiddleValue(distances))
+		setYear(getMiddleValue(years))
+		setPassengers(null)
+	}
+
     return (
         <main className="w-full flex flex-col items-center justify-center gap-16">
 			<HomeSection
@@ -84,6 +92,7 @@ const Page = () => {
 				sectionRef={resultSection}
 				nextSection={homeSection}
 				loanRate={loanRate}
+				resetFields={resetFields}
 			/>
         </main>
     )

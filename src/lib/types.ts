@@ -4,6 +4,8 @@ import type * as distances from "@/assets/data/distances.json"
 import type * as years from "@/assets/data/years.json"
 import type * as passengers from "@/assets/data/passengers.json"
 
+// Types de chaque propriété qui doit être indiquée par l'utilisateur
+// Chaque type est déduit du fichier JSON qui lui est associé
 
 export type CarType = typeof cars[0]
 export type EnergyType = typeof energies[0]

@@ -30,7 +30,7 @@ const PassengersSection = ({ sectionRef, nextSection, passengers, setPassengers 
 			className="w-full min-h-screen flex flex-col items-center justify-start gap-4 sm:gap-16 py-16 max-w-[900px]"
 		>
 			<h2 className="text-4xl font-medium pt-12 pb-4 text-center">
-                Combien de passagers seront présents dans le véhicule en moyenne ?
+                En moyenne, combien de passagers seront présents dans le véhicule ?
 			</h2>
 			<div className="flex flex-col sm:flex-row flex-wrap items-stretch justify-center gap-8">
 				{

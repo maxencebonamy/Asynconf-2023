@@ -24,9 +24,9 @@ const EnergySection = ({sectionRef, nextSection, energy, setEnergy}: EnergySecti
     }, [energy])
 
     return (
-        <section ref={sectionRef} className="w-full h-screen flex flex-col items-center justify-start gap-16 p-8">
+        <section ref={sectionRef} className="w-full h-screen flex flex-col items-center justify-start gap-16 p-8 max-w-[900px]">
             <h2 className="text-4xl font-medium pt-12 pb-4 text-center">Quel est le type d'énergie que consomme le véhicule ?</h2>
-            <div className="flex flex-row flex-wrap items-stretch justify-center gap-8 max-w-[800px]">
+            <div className="flex flex-row flex-wrap items-stretch justify-center gap-8">
                 {
                     energies.map(e => (
                         <EnergyCard key={e.id} energy={e} onClick={() => updateEnergy(e)} selected={energy === e} />

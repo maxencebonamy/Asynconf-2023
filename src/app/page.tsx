@@ -1,21 +1,22 @@
 "use client"
 
-import EnergySection from "@/components/sections/energy/EnergySection";
-import HomeSection from "@/components/sections/home/HomeSection";
-import CarSection from "@/components/sections/car/CarSection";
-import { CarType, DistanceType, EnergyType, PassengersType, YearType } from "@/lib/types";
-import { useEffect, useRef, useState } from "react";
-import DistanceSection from "@/components/sections/distance/DistanceSection";
-import YearSection from "@/components/sections/year/YearSection";
-import PassengersSection from "@/components/sections/passengers/PassengersSection";
-import { cumputeLoanRate } from "@/lib/algorithm";
-import { Result } from "postcss";
-import ResultSection from "@/components/sections/result/ResultSection";
+import EnergySection from "@/components/sections/energy/EnergySection"
+import HomeSection from "@/components/sections/home/HomeSection"
+import CarSection from "@/components/sections/car/CarSection"
+import { CarType, DistanceType, EnergyType, PassengersType, YearType } from "@/lib/types"
+import { useEffect, useRef, useState } from "react"
+import DistanceSection from "@/components/sections/distance/DistanceSection"
+import YearSection from "@/components/sections/year/YearSection"
+import PassengersSection from "@/components/sections/passengers/PassengersSection"
+import { cumputeLoanRate } from "@/lib/algorithm"
+import { Result } from "postcss"
+import ResultSection from "@/components/sections/result/ResultSection"
+import distances from "@/assets/data/distances.json"
 
 const Page = () => {
 	const [car, setCar] = useState<CarType | null>(null)
 	const [energy, setEnergy] = useState<EnergyType | null>(null)
-	const [distance, setDistance] = useState<DistanceType | null>(null)
+	const [distance, setDistance] = useState<DistanceType>(distances[Math.floor(distances.length / 2)])
 	const [year, setYear] = useState<YearType | null>(null)
 	const [passengers, setPassengers] = useState<PassengersType | null>(null)
 	const [loanRate, setLoanRate] = useState<number | null>(null)

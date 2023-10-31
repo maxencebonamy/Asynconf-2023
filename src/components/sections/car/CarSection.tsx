@@ -24,9 +24,9 @@ const CarSection = ({sectionRef, nextSection, car, setCar}: CarSectionProps) => 
     }, [car])
 
     return (
-        <section ref={sectionRef} className="w-full h-screen flex flex-col items-center justify-start gap-16 p-8">
+        <section ref={sectionRef} className="w-full h-screen flex flex-col items-center justify-start gap-16 p-8 max-w-[900px]">
             <h2 className="text-4xl font-medium pt-12 pb-4 text-center">Quel est le type du véhicule ?</h2>
-            <div className="flex flex-row flex-wrap items-stretch justify-center gap-8 max-w-[800px]">
+            <div className="flex flex-row flex-wrap items-stretch justify-center gap-8">
                 {
                     cars.map(e => (
                         <CarCard key={e.id} car={e} onClick={() => updateCar(e)} selected={car === e} />

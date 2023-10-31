@@ -8,3 +8,7 @@ export function cn(...inputs: ClassValue[]) {
 export function scrollToSection(section: React.RefObject<HTMLElement>) {
 	section.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
 }
+
+export function formatNumberWithSeparators(value: number): string {
+	return value.toLocaleString("fr-FR")
+}

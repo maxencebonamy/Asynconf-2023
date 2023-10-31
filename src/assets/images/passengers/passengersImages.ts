@@ -9,10 +9,10 @@ import passengers from "@/assets/data/passengers.json"
 const types = passengers.map(e => e.id)
 
 const passengersImages: { [key in typeof types[number]]: StaticImageData} = {
-    1: p1,
-    2: p2,
-    3: p3,
-    4: p4
+    0: p1,
+    1: p2,
+    2: p3,
+    3: p4
 }
 
 export default passengersImages

@@ -1,21 +1,25 @@
 [
     {
         "id": 0,
+        "name": "1 passager",
         "nbPassengers": 1,
         "extra": 0.11
     },
     {
         "id": 1,
+        "name": "2 passagers",
         "nbPassengers": 2,
         "extra": -0.17
     },
     {
         "id": 2,
+        "name": "3 passagers",
         "nbPassengers": 3,
         "extra": -0.29
     },
     {
         "id": 3,
+        "name": "4 passagers ou +",
         "nbPassengers": 4,
         "extra": -0.53
     }

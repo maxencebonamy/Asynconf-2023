@@ -17,7 +17,7 @@ const YearCard = ({year, setYear, onClick} : YearCardProps) => {
     }
 
     return (
-        <Card className="w-[650px]">
+        <Card className="w-[600px]">
             <CardHeader className="pb-2">
                 <CardTitle className="text-2xl font-semibold text-center">Sélectionnez l'année</CardTitle>
             </CardHeader>

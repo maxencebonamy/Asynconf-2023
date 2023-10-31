@@ -1,3 +1,14 @@
 {
-  "extends": "@maxencebonamy"
+  "extends": "@bluzzi",
+  "ignorePatterns": "/src/components/ui/*.tsx",
+  "rules": {
+      "semi": "off",
+      "indent": [
+          2,
+          "tab"
+      ],
+      "no-tabs": "off",
+      "@typescript-eslint/member-delimiter-style": "off",
+      "@typescript-eslint/explicit-function-return-type": "off"
+  }
 }

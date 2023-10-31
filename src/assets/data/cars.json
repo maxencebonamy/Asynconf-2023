@@ -1,0 +1,30 @@
+[
+    {
+        "id": "citadine",
+        "name": "Citadine",
+        "minWeight": 800,
+        "maxWeight": 1300,
+        "mark": 8
+    },
+    {
+        "id": "cabriolet",
+        "name": "Cabriolet",
+        "minWeight": 1300,
+        "maxWeight": 2000,
+        "mark": 6
+    },
+    {
+        "id": "berline",
+        "name": "Berline",
+        "minWeight": 1300,
+        "maxWeight": 1800,
+        "mark": 6.5
+    },
+    {
+        "id": "suv",
+        "name": "SUV ou 4x4",
+        "minWeight": 1500,
+        "maxWeight": 2500,
+        "mark": 4
+    }
+]

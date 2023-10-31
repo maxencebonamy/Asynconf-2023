@@ -1,0 +1,27 @@
+[
+    {
+        "id": "essence",
+        "name": "Essence",
+        "mark": 5
+    },
+    {
+        "id": "electrique",
+        "name": "Électrique",
+        "mark": 9
+    },
+    {
+        "id": "gaz",
+        "name": "Gaz",
+        "mark": 6
+    },
+    {
+        "id": "diesel",
+        "name": "Diesel",
+        "mark": 4
+    },
+    {
+        "id": "hybride",
+        "name": "Hybride",
+        "mark": 7
+    }
+]

@@ -22,7 +22,7 @@
     },
     {
         "id": "suv",
-        "name": "SUV / 4x4",
+        "name": "SUV ou 4x4",
         "minWeight": 1500,
         "maxWeight": 2500,
         "mark": 4

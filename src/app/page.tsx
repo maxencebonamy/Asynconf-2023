@@ -3,7 +3,7 @@
 import EnergySection from "@/components/sections/energy/EnergySection"
 import HomeSection from "@/components/sections/home/HomeSection"
 import CarSection from "@/components/sections/car/CarSection"
-import { CarType, DistanceType, EnergyType, PassengersType, YearType } from "@/lib/types"
+import type { CarType, DistanceType, EnergyType, PassengersType, YearType } from "@/lib/types"
 import { useEffect, useRef, useState } from "react"
 import DistanceSection from "@/components/sections/distance/DistanceSection"
 import YearSection from "@/components/sections/year/YearSection"
@@ -46,8 +46,8 @@ const Page = () => {
 		setPassengers(null)
 	}
 
-    return (
-        <main className="w-full flex flex-col items-center justify-center gap-16">
+	return (
+		<main className="w-full flex flex-col items-center justify-center gap-16">
 			<HomeSection
 				sectionRef={homeSection}
 				nextSection={carSection}
@@ -80,7 +80,7 @@ const Page = () => {
 				year={year}
 				setYear={setYear}
 			/>
-			
+
 			<PassengersSection
 				sectionRef={passengersSection}
 				nextSection={resultSection}
@@ -94,8 +94,8 @@ const Page = () => {
 				loanRate={loanRate}
 				resetFields={resetFields}
 			/>
-        </main>
-    )
+		</main>
+	)
 }
 
 export default Page

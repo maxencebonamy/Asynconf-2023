@@ -6,14 +6,14 @@ import { useEffect, useState } from "react"
 
 
 export function ModeToggle() {
-    const { theme, setTheme } = useTheme()
-    const [darkTheme, setDarkTheme] = useState(theme === "dark")
+	const { theme, setTheme } = useTheme()
+	const [darkTheme, setDarkTheme] = useState(theme === "dark")
 
-    useEffect(() => {
-        setTheme(darkTheme ? "dark" : "light")
-    }, [darkTheme])
+	useEffect(() => {
+		setTheme(darkTheme ? "dark" : "light")
+	}, [darkTheme])
 
-    return (
-        <Switch onCheckedChange={e => setDarkTheme(!darkTheme)} defaultChecked={true} />
-    )
+	return (
+		<Switch onCheckedChange={() => setDarkTheme(!darkTheme)} defaultChecked={true} />
+	)
 }

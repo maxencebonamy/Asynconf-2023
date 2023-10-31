@@ -1,8 +1,8 @@
-import * as cars from "@/assets/data/cars.json"
-import * as energies from "@/assets/data/energies.json"
-import * as distances from "@/assets/data/distances.json"
-import * as years from "@/assets/data/years.json"
-import * as passengers from "@/assets/data/passengers.json"
+import type * as cars from "@/assets/data/cars.json"
+import type * as energies from "@/assets/data/energies.json"
+import type * as distances from "@/assets/data/distances.json"
+import type * as years from "@/assets/data/years.json"
+import type * as passengers from "@/assets/data/passengers.json"
 
 
 export type CarType = typeof cars[0]

@@ -14,25 +14,25 @@ interface ShadowButtonProps {
     onClick?: () => void
 }
 
-const ShadowButton = ({children, className, onClick}: ShadowButtonProps) => {
+const ShadowButton = ({ children, className, onClick }: ShadowButtonProps) => {
 
-    const [shadowRadius, setShadowRadius] = useState(MIN_SHDAOW_RADIUS)
+	const [shadowRadius, setShadowRadius] = useState(MIN_SHDAOW_RADIUS)
 
-    const style = {
-        boxShadow: `0 0 ${shadowRadius * 4}px ${shadowRadius}px ${SHADOW_COLOR}`
-    }
+	const style = {
+		boxShadow: `0 0 ${shadowRadius * 4}px ${shadowRadius}px ${SHADOW_COLOR}`
+	}
 
-    return (
-        <Button
-            className={cn("transition-shadow duration-500", className ?? "")}
-            style={style}
-            onMouseEnter={() => setShadowRadius(MAX_SHADOW_RADIUS)}
-            onMouseLeave={() => setShadowRadius(MIN_SHDAOW_RADIUS)}
-            onClick={onClick ?? (() => {})}
-        >
-            {children}
-        </Button>
-    )
+	return (
+		<Button
+			className={cn("transition-shadow duration-500", className ?? "")}
+			style={style}
+			onMouseEnter={() => setShadowRadius(MAX_SHADOW_RADIUS)}
+			onMouseLeave={() => setShadowRadius(MIN_SHDAOW_RADIUS)}
+			onClick={onClick ?? (() => {})}
+		>
+			{children}
+		</Button>
+	)
 }
 
 export default ShadowButton

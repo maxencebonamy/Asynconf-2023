@@ -1,3 +1,7 @@
+/**
+ * Carte de crédit affichée dans la seciton Home
+ */
+
 import creditCard from "@/assets/images/credit_card/cerdit_card.png"
 import { Card } from "@/components/ui/card"
 import { useTheme } from "next-themes"
@@ -5,8 +9,10 @@ import Image from "next/image"
 import Tilt from "react-parallax-tilt"
 
 const CreditCard = () => {
+	// Le thème sert à afficher la carte avec un fond sombre si le thème est clair et inversement
 	const { theme } = useTheme()
 
+	// J'utilise ici des classes CSS que j'ai écrites dans le fichier "globals.css" : background-blur & background-gradient
 	return (
 		<Tilt
 			tiltReverse

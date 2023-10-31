@@ -1,3 +1,7 @@
+/**
+ * Barre de navigation de l'application (qui contient l'icône ainsi que le "toggle" du thème)
+ */
+
 "use client"
 
 import Image from "next/image"
@@ -8,6 +12,7 @@ import logoLight from "@/assets/logo_light.png"
 import logoDark from "@/assets/logo_dark.png"
 
 const Navbar = () => {
+	// Le thème sert à afficher le logo clair ou foncé (clair si le thème est foncé et inversement)
 	const { theme } = useTheme()
 
 	return (

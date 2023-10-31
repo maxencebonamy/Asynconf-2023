@@ -1,3 +1,9 @@
+/**
+ * Section de sélection du type de véhicule
+ */
+
+"use client"
+
 import cars from "@/assets/data/cars.json"
 import CarCard from "./CarCard"
 import type { CarType } from "@/lib/types"
@@ -5,9 +11,13 @@ import { useEffect } from "react"
 import { scrollToSection } from "@/lib/utils"
 
 interface CarSectionProps {
+	// Référence qui va permettre de stocker ce composant
     sectionRef: React.RefObject<HTMLElement>
+	// Référence de la section "suivante" (un bouton ici permet de scroll jusqu'à cette section)
     nextSection: React.RefObject<HTMLElement>
+	// Type de voiture actuel (vient de l'état défini dans la page principale)
     car: CarType | null
+	// Setter du type de voiture (vient de l'état défini dans la page principale)
     setCar: (value: CarType) => void
 }
 
@@ -16,11 +26,13 @@ const CarSection = ({ sectionRef, nextSection, car, setCar }: CarSectionProps) =
 		setCar(value)
 	}
 
+	// Le useEffect permet d'ajouter un délai avant de scroll, de manière à laisser l'animation de sélection de carte se jouer
 	useEffect(() => {
 		if (!car) return
 		const timeout = setTimeout(() => {
 			scrollToSection(nextSection)
 		}, 500)
+		// On renvoie une fonction qui clear ce qu'on a définit dans le useEffect
 		return () => clearTimeout(timeout)
 	}, [car])
 

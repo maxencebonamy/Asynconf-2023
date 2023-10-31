@@ -1,3 +1,7 @@
+/**
+ * Section de sélection de la distance parcourue
+ */
+
 import type { DistanceType } from "@/lib/types"
 import DistanceCard from "./DistanceCard"
 import { scrollToSection } from "@/lib/utils"
@@ -6,9 +10,13 @@ import distanceIcon from "@/assets/images/distance.png"
 import Image from "next/image"
 
 interface DistanceSectionProps {
+	// Référence qui va permettre de stocker ce composant
     sectionRef: React.RefObject<HTMLElement>
+	// Référence de la section "suivante" (un bouton ici permet de scroll jusqu'à cette section)
     nextSection: React.RefObject<HTMLElement>
+	// Range de distance parcourue actuelle (vient de l'état défini dans la page principale)
     distance: DistanceType
+	// Setter de la range de distance parcourue (vient de l'état défini dans la page principale)
     setDistance: (value: DistanceType) => void
 }
 

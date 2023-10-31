@@ -1,3 +1,7 @@
+/**
+ * Carte représentant un nombre de passagers
+ */
+
 "use client"
 
 import { Card, CardContent, CardHeader, CardTitle } from "../../ui/card"
@@ -7,8 +11,11 @@ import { cn } from "@/lib/utils"
 import passengersImages from "@/assets/images/passengers/passengersImages"
 
 interface PassengerCardProps {
+	// Nombre de passagers
     passengers: PassengersType
+	// Fonction appelée quand l'utilisateur clique sur la carte
     onClick: () => void
+	// Booleen qui indique si la carte est sélectionnée ou non (si c'est le cas la bordure sera plus prononcée)
     selected?: boolean
 }
 

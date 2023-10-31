@@ -1,3 +1,7 @@
+/**
+ * Section de sélection de l'année de fabrication
+ */
+
 import IconCard from "@/components/IconCard"
 import type { YearType } from "@/lib/types"
 import yearIcon from "@/assets/images/year.png"
@@ -6,9 +10,13 @@ import YearCard from "./YearCard"
 import { scrollToSection } from "@/lib/utils"
 
 interface YearSectionProps {
+	// Référence qui va permettre de stocker ce composant
     sectionRef: React.RefObject<HTMLElement>
+	// Référence de la section "suivante" (un bouton ici permet de scroll jusqu'à cette section)
     nextSection: React.RefObject<HTMLElement>
+	// Range d'année de fabrication actuelle (vient de l'état défini dans la page principale)
     year: YearType
+	// Setter de la range d'année de fabrication (vient de l'état défini dans la page principale)
     setYear: (value: YearType) => void
 }
 

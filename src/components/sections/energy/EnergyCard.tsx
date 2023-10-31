@@ -1,3 +1,7 @@
+/**
+ * Carte représentant un type d'énergie
+ */
+
 "use client"
 
 import { Card, CardContent, CardHeader, CardTitle } from "../../ui/card"
@@ -7,8 +11,11 @@ import { cn } from "@/lib/utils"
 import energyImages from "@/assets/images/energies/energyImages"
 
 interface EnergyCardProps {
+	// Énergie du véhicule
     energy: EnergyType
+	// Fonction appelée quand l'utilisateur clique sur la carte
     onClick: () => void
+	// Booleen qui indique si la carte est sélectionnée ou non (si c'est le cas la bordure sera plus prononcée)
     selected?: boolean
 }
 

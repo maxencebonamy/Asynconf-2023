@@ -1,11 +1,17 @@
+/**
+ * Carte indiquant le taux d'emprunt final
+ */
+
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { formatNumberTwoDecimals, formatNumberWithComma } from "@/lib/utils"
 
 interface ResultCardProps {
+	// Valeur du taux d'emprunt final (forcément non nulle)
     loanRate: number
 }
 
 const ResultCard = ({ loanRate } : ResultCardProps) => {
+	// Formattage de la valeur (d'abord arrondissement au centième près puis changement du point en virgule)
 	const formattedLoanRate = formatNumberWithComma(formatNumberTwoDecimals(loanRate))
 
 	return (

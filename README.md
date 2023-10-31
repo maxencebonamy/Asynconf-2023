@@ -60,6 +60,8 @@ npx jest
 - La modification d'un de ces fichiers entraînera automatiquement des modifications sur le site de manière à ajouter, modifier ou supprimer des options très facilement.
 - Le code est commenté de manière à expliquer les instructions ou fonctions qui ne sont pas explicites.
 
+- *Je n'ai malheureusement pas eu le temps de réaliser des tests de scénarios pour les composants avec React Testing Library.*
+
 <br>
 
 ## Technologies utilisées
@@ -72,6 +74,7 @@ Pour réaliser ce projet, j'ai fait le choix d'utiliser les technologies suivant
 - [x] **<a href="https://tailwindcss.com" target="_blank">TailwindCSS</a>** : La librairie CSS que j'utilise dans la plupart de mes projets pour gagner en efficacité.
 - [x] **<a href="https://ui.shadcn.com" target="_blank">Shadcn/UI</a>** : Une librairie React & Tailwind qui fournit des composants d'UI. J'ai ensuite apporté quelques modifications sur certains.
 - [x] **<a href="https://eslint.org" target="_blank">ESLint</a>** : Le linter TypeScript que j'ai utilisé pour écrire du code propre et maintenable (je l'utilise également comme formatter).
+- [x] **<a href="https://jestjs.io/" target="_blank">Jest</a>** : Une librairie JavaScript pour réaliser des tests unitaires.
 
 <br>
 
@@ -87,7 +90,7 @@ Pour réaliser ce projet, j'ai fait le choix d'utiliser les technologies suivant
 
 Tout le code source se situe dans le dossier `src`.
 - Sous-dossier `app` : Point de départ de l'application, le fichier `layout.tsx` englobe le fichier `page.tsx` (fonctionnement du routing de NextJS).
-- Sous-dossier `assets` : Images, icônes et fichier de données au format `json`.
+- Sous-dossier `assets` : Images, icônes et fichier de données au format `json`. Un fichier `README.md` est placé dans le dossier des données pour plus d'explications.
 - Sous-dossier `components` : Tous les composants React utilisées dans l'application, ceux présents dans le sous-dossier `ui` viennent de la librairie Shadcn/UI, ce sont donc les seuls que je n'ai pas écrits.
 - Sous-dossier `lib` : Les fichiers sources, qui correspondent à l'algorithme, aux fonctions utilitaires et les types.
 

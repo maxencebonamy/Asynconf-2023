@@ -1,3 +1,7 @@
+/**
+ * Carte représentant une range de distances parcourues
+ */
+
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Slider } from "@/components/ui/slider"
@@ -6,12 +10,16 @@ import distances from "@/assets/data/distances.json"
 import { formatNumberWithSeparators } from "@/lib/utils"
 
 interface DistanceCardProps {
+	// Range de distance parcourue
     distance: DistanceType
+	// Setter de la range de distance parcourue
     setDistance: (value: DistanceType) => void
+	// Fonction appelée quand l'utilisateur clique sur le bouton "Continuer"
     onClick: () => void
 }
 
 const DistanceCard = ({ distance, setDistance, onClick } : DistanceCardProps) => {
+	// Fonction qui sert à assigner à la distance actuelle une valeur du fichier json à aprtir de son id
 	const updateDistance = (id: number) => {
 		const newDistance = distances.find(e => e.id === id)
 		if (newDistance) setDistance(newDistance)

@@ -1,3 +1,7 @@
+/**
+ * Ce composant viet de la librairie Shadcn/UI, je ne l'ai pas écrit moi-même
+ */
+
 import * as React from "react"
 
 import { cn } from "@/lib/utils"

@@ -1,3 +1,7 @@
+/**
+ * Section Home (tout en haut)
+ */
+
 import { ArrowRight } from "lucide-react"
 import CreditCard from "./CreditCard"
 import ShadowButton from "@/components/ShadowButton"
@@ -5,7 +9,9 @@ import { scrollToSection } from "@/lib/utils"
 import ShadowCircle from "@/components/ShadowCircle"
 
 interface HomeSectionProps {
+	// Référence qui va permettre de stocker ce composant
     sectionRef: React.RefObject<HTMLElement>
+	// Référence de la section "suivante" (un bouton ici permet de scroll jusqu'à cette section)
     nextSection: React.RefObject<HTMLElement>
 }
 

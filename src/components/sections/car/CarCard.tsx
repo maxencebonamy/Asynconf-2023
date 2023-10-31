@@ -1,3 +1,7 @@
+/**
+ * Carte représentant un type de véhicule
+ */
+
 "use client"
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../../ui/card"
@@ -7,8 +11,11 @@ import type { CarType } from "@/lib/types"
 import { cn } from "@/lib/utils"
 
 interface CarCardProps {
+	// Type de véhicule
     car: CarType
+	// Fonction appelée quand l'utilisateur clique sur la carte
     onClick: () => void
+	// Booleen qui indique si la carte est sélectionnée ou non (si c'est le cas la bordure sera plus prononcée)
     selected?: boolean
 }
 

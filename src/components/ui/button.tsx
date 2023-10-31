@@ -1,3 +1,7 @@
+/**
+ * Ce composant viet de la librairie Shadcn/UI, je ne l'ai pas écrit moi-même
+ */
+
 import * as React from "react"
 import { Slot } from "@radix-ui/react-slot"
 import { cva, type VariantProps } from "class-variance-authority"

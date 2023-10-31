@@ -20,7 +20,7 @@ const DistanceCard = ({distance, setDistance, onClick} : DistanceCardProps) => {
     }
 
     return (
-        <Card className="w-[600px]">
+        <Card className="sm:w-[600px]">
             <CardHeader className="pb-2">
                 <CardTitle className="text-2xl font-semibold text-center">Sélectionnez la distance</CardTitle>
             </CardHeader>

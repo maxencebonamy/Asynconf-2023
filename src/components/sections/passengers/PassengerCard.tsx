@@ -14,7 +14,7 @@ interface PassengerCardProps {
 
 const PassengerCard = ({ passengers, onClick, selected }: PassengerCardProps) => {
     return (
-        <Card className={cn("cursor-pointer w-96 transition-all duration-500 hover:bg-muted", selected ? "border-muted-foreground" : "")} onClick={onClick}>
+        <Card className={cn("cursor-pointer sm:w-96 transition-all duration-500 hover:bg-muted", selected ? "border-muted-foreground" : "")} onClick={onClick}>
             <CardHeader className="pb-2">
                 <CardTitle className="text-2xl font-semibold text-center">{passengers.name}</CardTitle>
             </CardHeader>

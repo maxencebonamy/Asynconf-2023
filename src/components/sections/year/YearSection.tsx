@@ -16,7 +16,7 @@ interface YearSectionProps {
 
 const YearSection = ({sectionRef, nextSection, year, setYear}: YearSectionProps) => {
     return (
-        <section ref={sectionRef} className="w-full h-screen flex flex-col items-center justify-start gap-16 px-4 py-16 max-w-[900px]">
+        <section ref={sectionRef} className="w-full min-h-screen flex flex-col items-center justify-start gap-4 sm:gap-16 px-4 py-16 max-w-[900px] overflow-x-hidden">
             <h2 className="text-4xl font-medium pt-12 pb-4 text-center">
                 En quelle année a été fabriqué le véhicule ?
             </h2>
@@ -26,7 +26,7 @@ const YearSection = ({sectionRef, nextSection, year, setYear}: YearSectionProps)
                     setYear={setYear}
                     onClick={() => scrollToSection(nextSection)}
                 />
-                <IconCard className="absolute z-10 -right-24 -bottom-16">
+                <IconCard className="absolute z-10 -right-16 sm:-right-24 -bottom-6 sm:-bottom-16">
                     <Image src={yearIcon} alt="Year Icon" width={80} height={80} />
                 </IconCard>
             </div>

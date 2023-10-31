@@ -14,7 +14,7 @@ interface DistanceSectionProps {
 
 const DistanceSection = ({sectionRef, nextSection, distance, setDistance}: DistanceSectionProps) => {
     return (
-        <section ref={sectionRef} className="w-full h-screen flex flex-col items-center justify-start gap-16 px-4 py-16 max-w-[900px]">
+        <section ref={sectionRef} className="w-full min-h-screen flex flex-col items-center justify-start gap-4 sm:gap-16 px-4 py-16 max-w-[900px] overflow-x-hidden">
             <h2 className="text-4xl font-medium pt-12 pb-4 text-center">
                 Quelle est la distance moyenne annuelle que vous allez parcourir avec le véhicule ?
             </h2>
@@ -24,7 +24,7 @@ const DistanceSection = ({sectionRef, nextSection, distance, setDistance}: Dista
                     setDistance={setDistance}
                     onClick={() => scrollToSection(nextSection)}
                 />
-                <IconCard className="absolute z-10 -left-24 -top-16">
+                <IconCard className="absolute z-10 -left-10 sm:-left-24 -bottom-14 sm:-top-16">
                     <Image src={distanceIcon} alt="Distance Icon" width={80} height={80} />
                 </IconCard>
             </div>

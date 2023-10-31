@@ -13,7 +13,7 @@ interface ResultCardProps {
 
 const ResultCard = ({loanRate} : ResultCardProps) => {
     return (
-        <Card className="w-[600px]">
+        <Card className="sm:w-[600px]">
             <CardHeader className="pb-2">
                 <CardTitle className="text-2xl font-semibold text-center">
                     Votre taux d'emprunt est de :

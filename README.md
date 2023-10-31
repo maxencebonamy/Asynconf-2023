@@ -12,6 +12,9 @@ Voici mon projet pour cette édition du tournoi de l'Asynconf. Je l'ai réalisé
 <br>
 Vous retrouverez ci-dessous les instructions pour exécuter le code, ainsi qu'une description brève du travail que j'ai réalisé conformément aux attentes du jury. Ensuite, vous retrouverez les technologies que j'ai utilisées pour réaliser le projet ainsi que l'arborescence du projet.
 
+> [!IMPORTANT]
+> Le projet se lance sur Replit mais n'est vraiment pas stable du tout, donc si vous voulez l'essayer, je vous conseille très fortement de vous rendre plutôt ici : <a href="https://asynconf.maxencebonamy.fr" target="_blank">asynconf.maxencebonamy.fr</a> !
+
 <br>
 
 ## Lancement du code

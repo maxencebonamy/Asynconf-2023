@@ -1,5 +1,6 @@
 {
   "extends": "@bluzzi",
+  "ignorePatterns": "/src/components/ui/*.tsx",
   "rules": {
       "semi": "off",
       "indent": [

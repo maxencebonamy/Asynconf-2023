@@ -17,7 +17,7 @@ const IconCard = ({className, children} : IconCardProps) => {
             glareBorderRadius="12px"
             className={className ?? ""}
         >
-            <Card className="p-2">
+            <Card className="p-6">
                 {children}
             </Card>
         </Tilt>

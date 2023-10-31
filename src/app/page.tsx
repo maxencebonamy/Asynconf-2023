@@ -9,15 +9,16 @@ import DistanceSection from "@/components/sections/distance/DistanceSection"
 import YearSection from "@/components/sections/year/YearSection"
 import PassengersSection from "@/components/sections/passengers/PassengersSection"
 import { cumputeLoanRate } from "@/lib/algorithm"
-import { Result } from "postcss"
 import ResultSection from "@/components/sections/result/ResultSection"
 import distances from "@/assets/data/distances.json"
+import years from "@/assets/data/years.json"
+import { getMiddleValue } from "@/lib/utils"
 
 const Page = () => {
 	const [car, setCar] = useState<CarType | null>(null)
 	const [energy, setEnergy] = useState<EnergyType | null>(null)
-	const [distance, setDistance] = useState<DistanceType>(distances[Math.floor(distances.length / 2)])
-	const [year, setYear] = useState<YearType | null>(null)
+	const [distance, setDistance] = useState<DistanceType>(getMiddleValue(distances))
+	const [year, setYear] = useState<YearType>(getMiddleValue(years))
 	const [passengers, setPassengers] = useState<PassengersType | null>(null)
 	const [loanRate, setLoanRate] = useState<number | null>(null)
 

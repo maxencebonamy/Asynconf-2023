@@ -23,9 +23,9 @@ const HomeSection = ({nextSection}: HomeSectionProps) => {
                 <CreditCard />
 			</div>
 			<div className="absolute bottom-24">
-                <ShadowButton className="font-bold h-12 rounded-xl text-lg" onClick={() => scrollToSection(nextSection)}>
+                <ShadowButton className="font-semibold h-12 rounded-xl text-lg px-6" onClick={() => scrollToSection(nextSection)}>
                     Essayer
-                    <ArrowRight height={20} />
+                    <ArrowRight height={28} width={28} className="pl-2" />
                 </ShadowButton>
 			</div>
         </section>

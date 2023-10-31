@@ -33,7 +33,7 @@ const DistanceCard = ({distance, setDistance, onClick} : DistanceCardProps) => {
             </CardContent>
 
             <CardFooter className="flex flex-row items-center justify-center pt-2">
-                <Button onClick={onClick}>
+                <Button onClick={onClick} className="font-semibold">
                     Continuer
                 </Button>
             </CardFooter>

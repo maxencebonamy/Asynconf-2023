@@ -28,14 +28,8 @@ const DistanceSection = ({sectionRef, nextSection, distance, setDistance}: Dista
                     onClick={() => scrollToSection(nextSection)}
                 />
                 <IconCard className="absolute z-10 -left-24 -top-16">
-                    <Image src={distanceIcon} alt="Distance Icon" width={100} height={100} />
+                    <Image src={distanceIcon} alt="Distance Icon" width={80} height={80} />
                 </IconCard>
-                {/* {
-                    distances.map(e => (
-                        <Button key={e.id} onClick={() => updateDistance(e)}>{`${e.min} - ${e.max} km`}</Button>
-                    ))
-                }
-                <Slider className="cursor-pointer w-1/2" defaultValue={[20, 400]} max={500} step={1} /> */}
             </div>
         </section>
     )

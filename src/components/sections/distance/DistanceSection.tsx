@@ -1,6 +1,3 @@
-import distances from "@/assets/data/distances.json"
-import { Button } from "@/components/ui/button"
-import { Slider } from "@/components/ui/slider"
 import { DistanceType } from "@/lib/types"
 import DistanceCard from "./DistanceCard"
 import { scrollToSection } from "@/lib/utils"

@@ -22,6 +22,7 @@ const Page = () => {
 	const [passengers, setPassengers] = useState<PassengersType | null>(null)
 	const [loanRate, setLoanRate] = useState<number | null>(null)
 
+	const homeSection = useRef<HTMLElement>(null)
 	const carSection = useRef<HTMLElement>(null)
 	const energySection = useRef<HTMLElement>(null)
 	const distanceSection = useRef<HTMLElement>(null)
@@ -39,7 +40,10 @@ const Page = () => {
 
     return (
         <main className="w-full flex flex-col items-center justify-center gap-16">
-			<HomeSection nextSection={carSection} />
+			<HomeSection
+				sectionRef={homeSection}
+				nextSection={carSection}
+			/>
 
 			<CarSection
 				sectionRef={carSection}
@@ -76,7 +80,11 @@ const Page = () => {
 				setPassengers={setPassengers}
 			/>
 
-			<ResultSection sectionRef={resultSection} loanRate={loanRate} />
+			<ResultSection
+				sectionRef={resultSection}
+				nextSection={homeSection}
+				loanRate={loanRate}
+			/>
         </main>
     )
 }

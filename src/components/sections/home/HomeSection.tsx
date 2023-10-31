@@ -5,12 +5,13 @@ import ShadowButton from "@/components/ShadowButton"
 import { scrollToSection } from "@/lib/utils"
 
 interface HomeSectionProps {
+    sectionRef: React.RefObject<HTMLElement>
     nextSection: React.RefObject<HTMLElement>
 }
 
-const HomeSection = ({nextSection}: HomeSectionProps) => {
+const HomeSection = ({sectionRef, nextSection}: HomeSectionProps) => {
     return (
-        <section className="w-full h-screen flex flex-col items-center justify-center gap-16 py-28">
+        <section ref={sectionRef} className="w-full h-screen flex flex-col items-center justify-center gap-16 py-28">
             <div className="flex flex-row items-center justify-center gap-56">
 				<div className="flex flex-col items-start justify-center gap-4">
 					<h1 className="text-5xl font-medium">
